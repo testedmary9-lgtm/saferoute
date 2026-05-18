@@ -301,6 +301,26 @@ function initSectionSwitching() {
   });
 }
 
+function initMobileMenu() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+  const navLinks = document.querySelectorAll('.top-nav .nav-link');
+
+  if (!menuToggle || !mainNav) return;
+
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mainNav.classList.contains('open')) {
+        mainNav.classList.remove('open');
+      }
+    });
+  });
+}
+
 safeAddListener(resetBtn, 'click', () => {
   if (confirm('Reset all registration data and clear storage?')) {
     localStorage.removeItem(STORAGE_KEY);
@@ -349,5 +369,8 @@ window.addEventListener('load', () => {
   } else {
     hideAuthSections();
   }
+
+  initMobileMenu();
+
 });
 

@@ -51,6 +51,17 @@ header {
   gap: 12px;
   pointer-events: auto;
 }
+.menu-toggle {
+  display: none;
+  border: none;
+  background: #eef4ff;
+  color: #24315b;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
 .nav-link {
   color: #475c9c;
   text-decoration: none;
@@ -69,29 +80,8 @@ header {
   background: #eef4ff;
   border-color: #d4defc;
   color: #27386b;
-}  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 12px;
 }
-.nav-link {
-  color: #475c9c;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.nav-link:hover,
-.nav-link.active {
-  background: #eef4ff;
-  border-color: #d4defc;
-  color: #27386b;
-}
+
 .hero-content {
   display: grid;
   gap: 18px;
@@ -454,34 +444,77 @@ textarea:focus {
 @media (max-width: 900px) {
   .feature-grid,
   .contact-grid,
+  .process-grid,
+  .hero-chips,
   .summary-grid,
   .stats-grid {
     grid-template-columns: 1fr;
   }
   .site-header-bar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    position: relative;
+  }
+  .menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+  .top-nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: #ffffff;
+    padding: 16px 18px;
+    border-radius: 18px;
+    box-shadow: 0 20px 36px rgba(25, 52, 100, 0.12);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 10;
+  }
+  .top-nav.open {
+    display: flex;
+  }
+  .nav-link {
+    flex: 1 1 100%;
+    min-width: 0;
+    text-align: center;
   }
   .hero-content {
     text-align: left;
+    align-items: stretch;
+    max-width: unset;
   }
   .hero-actions {
     justify-content: flex-start;
+  }
+  .dashboard-main {
+    padding: 18px;
   }
 }
 @media (max-width: 640px) {
   header,
   section {
-    padding: 24px;
+    padding: 20px;
   }
   .container {
-    padding: 20px;
+    padding: 18px;
   }
   .hero-content {
     align-items: flex-start;
   }
   .site-header-bar {
     padding-bottom: 16px;
+  }
+  .hero-label {
+    font-size: 0.82rem;
+  }
+  .hero-chip,
+  .feature-card,
+  .process-card,
+  .contact-card {
+    padding: 18px;
   }
 }
 
