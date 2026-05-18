@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeRoute - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header id="home">
+      <div class="site-header-bar">
+        <a href="index.html" class="logo">SafeRoute</a>
+        <nav class="top-nav">
+          <a href="index.html#home" class="nav-link">Home</a>
+          <a href="index.html#about-section" class="nav-link">About</a>
+          <a href="index.html#contact-section" class="nav-link">Contact</a>
+          <a href="register.html" class="nav-link">Register</a>
+          <a href="login.html" class="nav-link active">Login</a>
+        </nav>
+      </div>
+      <div class="hero-content">
+        <h1>Welcome Back</h1>
+        <p>Login to view your registration details, payment status, and support dashboard.</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="login-section">
+        <h2>Login</h2>
+        <p class="section-intro">Enter your email and phone number to access your SafeRoute dashboard.</p>
+        <form id="login-form">
+          <div class="form-grid">
+            <div class="field-row">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" required placeholder="john@example.com" />
+            </div>
+            <div class="field-row">
+              <label for="login-phone">Phone</label>
+              <input type="tel" id="login-phone" required placeholder="08012345678" />
+            </div>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="secondary-btn">Login</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="about-section">
+        <h2>Why SafeRoute?</h2>
+        <p class="section-intro">Your login gives you access to your vehicle registration overview and payment history.</p>
+        <ul class="about-list">
+          <li>Fast access to your dashboard.</li>
+          <li>See current payment and registration status.</li>
+          <li>Keep your vehicle information secure and easy to update.</li>
+        </ul>
+      </section>
+
+      <section id="contact-section">
+        <h2>Contact</h2>
+        <p class="section-intro">Questions about login or registration? Reach out and we’ll help you quickly.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Support Email</h3>
+            <p>support@roadpayng.com</p>
+          </div>
+          <div class="contact-card">
+            <h3>Phone</h3>
+            <p>080 1234 5678</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>© 2026 RoadPayNG. Log in to continue supporting safer roads.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeRoute - Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header id="home">
+      <div class="site-header-bar">
+        <a href="index.html" class="logo">SafeRoute</a>
+        <div class="dashboard-user-label">
+          <span>Welcome,</span>
+          <strong id="dashboard-user-name">Guest</strong>
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1>Your SafeRoute Dashboard</h1>
+        <p>Track your vehicle registration, payment plan, and support details in one secure place.</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="dashboard-section">
+        <div class="dashboard-shell">
+          <aside class="dashboard-sidebar">
+            <div class="sidebar-brand">
+              <h3>SafeRoute</h3>
+              <p>See your registration details, payment status, and road support contributions.</p>
+            </div>
+            <nav class="sidebar-nav">
+              <a href="#overview" class="sidebar-link active" data-section="overview">Overview</a>
+              <a href="#profile" class="sidebar-link" data-section="profile">Profile</a>
+              <a href="#payments" class="sidebar-link" data-section="payments">Payments</a>
+              <a href="#support" class="sidebar-link" data-section="support">Support</a>
+            </nav>
+            <div class="sidebar-note">
+              <strong>Note:</strong> Your payment supports safer roads, repairs, and traffic improvements.
+            </div>
+          </aside>
+
+          <div class="dashboard-main">
+            <!-- OVERVIEW SECTION -->
+            <div class="dashboard-section active" id="overview-section" data-section="overview">
+              <div class="dashboard-header">
+                <div>
+                  <h2>Overview</h2>
+                  <p>Your payment status at a glance.</p>
+                </div>
+              </div>
+
+              <div class="payment-status-container" id="payment-status-container">
+                <div class="payment-alert alert-warning" id="payment-alert">
+                  <h3>⚠️ Payment Status</h3>
+                  <p id="payment-message">Loading payment information...</p>
+                </div>
+              </div>
+
+              <div class="overview-grid">
+                <div class="overview-card">
+                  <h4>Account Owner</h4>
+                  <p id="overview-owner">--</p>
+                </div>
+                <div class="overview-card">
+                  <h4>License Plate</h4>
+                  <p id="overview-plate">--</p>
+                </div>
+                <div class="overview-card">
+                  <h4>Payment Status</h4>
+                  <p id="overview-status">--</p>
+                </div>
+                <div class="overview-card">
+                  <h4>Days Until Expiry</h4>
+                  <p id="overview-days">--</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROFILE SECTION -->
+            <div class="dashboard-section" id="profile-section" data-section="profile">
+              <div class="dashboard-header">
+                <div>
+                  <h2>Profile</h2>
+                  <p>Your account and vehicle information.</p>
+                </div>
+              </div>
+
+              <div class="profile-card">
+                <div class="profile-row">
+                  <span class="profile-label">Full Name:</span>
+                  <span class="profile-value" id="profile-name">--</span>
+                </div>
+                <div class="profile-row">
+                  <span class="profile-label">Email:</span>
+                  <span class="profile-value" id="profile-email">--</span>
+                </div>
+                <div class="profile-row">
+                  <span class="profile-label">Phone:</span>
+                  <span class="profile-value" id="profile-phone">--</span>
+                </div>
+                <div class="profile-row">
+                  <span class="profile-label">Vehicle Model:</span>
+                  <span class="profile-value" id="profile-car">--</span>
+                </div>
+                <div class="profile-row">
+                  <span class="profile-label">License Plate:</span>
+                  <span class="profile-value" id="profile-plate-num">--</span>
+                </div>
+                <div class="profile-row">
+                  <span class="profile-label">Registration Date:</span>
+                  <span class="profile-value" id="profile-reg-date">--</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PAYMENTS SECTION -->
+            <div class="dashboard-section" id="payments-section" data-section="payments">
+              <div class="dashboard-header">
+                <div>
+                  <h2>Payments</h2>
+                  <p>Manage your payments and renewals.</p>
+                </div>
+              </div>
+
+              <div class="payment-details-card">
+                <h3>Payment Details</h3>
+                <div class="payment-info-row">
+                  <span class="payment-label">Plan Type:</span>
+                  <span class="payment-value" id="payments-plan">--</span>
+                </div>
+                <div class="payment-info-row">
+                  <span class="payment-label">Amount Paid:</span>
+                  <span class="payment-value" id="payments-amount">--</span>
+                </div>
+                <div class="payment-info-row">
+                  <span class="payment-label">Last Payment Date:</span>
+                  <span class="payment-value" id="payments-date">--</span>
+                </div>
+                <div class="payment-info-row">
+                  <span class="payment-label">Expiration Date:</span>ading
+                  <span class="payment-value" id="payments-expiry">--</span>
+                </div>
+                <div class="payment-info-row">
+                  <span class="payment-label">Days Until Expiry:</span>
+                  <span class="payment-value" id="payments-days">--</span>
+                </div>
+              </div>
+
+              <div class="payment-methods-section">
+                <h3>Where to Pay</h3>
+                <div class="payment-methods-grid">
+                  <div class="payment-method">
+                    <h4>Bank Transfer</h4>
+                    <p>Account Name: SafeRoute</p>
+                    <p>Account Number: 1234567890</p>
+                    <p>Bank: Central Bank</p>
+                  </div>
+                  <div class="payment-method">
+                    <h4>Online Payment</h4>
+                    <button class="primary-btn" id="online-pay-btn">Pay Online</button>
+                  </div>
+                  <div class="payment-method">
+                    <h4>Mobile Payment</h4>
+                    <p>USSD: *123#</p>
+                    <p>or via mobile app</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SUPPORT SECTION -->
+            <div class="dashboard-section" id="support-section" data-section="support">
+              <div class="dashboard-header">
+                <div>
+                  <h2>Support & Contact</h2>
+                  <p>Need help? Get in touch with us.</p>
+                </div>
+              </div>
+
+              <p>Need help with your payment or have questions? Get in touch with us:</p>
+              <div class="support-methods">
+                <div class="support-item">
+                  <span class="support-icon">📞</span>
+                  <div class="support-info">
+                    <h4>Phone</h4>
+                    <p><strong>+234 (0) 700 000 0000</strong></p>
+                  </div>
+                </div>
+                <div class="support-item">
+                  <span class="support-icon">✉️</span>
+                  <div class="support-info">
+                    <h4>Email</h4>
+                    <p><strong><a href="mailto:support@saferoute.com">support@saferoute.com</a></strong></p>
+                  </div>
+                </div>
+              </div>
+              <p class="support-hours">We're available Monday - Friday, 9:00 AM - 5:00 PM (WAT)</p>
+            </div>
+
+            <div class="dashboard-actions">
+              <button id="logout-btn" class="secondary-btn">Logout</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>© 2026 SafeRoute. Your dashboard keeps your registration details safe.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

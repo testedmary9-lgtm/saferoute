@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeRoute - Register</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header id="home">
+      <div class="site-header-bar">
+        <a href="index.html" class="logo">SafeRoute</a>
+        <nav class="top-nav">
+          <a href="index.html#home" class="nav-link">Home</a>
+          <a href="index.html#about-section" class="nav-link">About</a>
+          <a href="index.html#contact-section" class="nav-link">Contact</a>
+          <a href="register.html" class="nav-link active">Register</a>
+          <a href="login.html" class="nav-link">Login</a>
+        </nav>
+      </div>
+      <div class="hero-content">
+        <h1>Register Your Car Today</h1>
+        <p>Join SafeRoute and support safer roads with easy vehicle registration and flexible payment plans.</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="register-section">
+        <h2>Car Registration</h2>
+        <p class="section-intro">Complete your vehicle registration and choose a payment plan that fits your needs. Your contribution helps build safer roads and reduces traffic across Nigeria.</p>
+        <form id="registration-form">
+          <div class="form-grid">
+            <div class="field-row">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" required placeholder="John Doe" />
+            </div>
+            <div class="field-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" required placeholder="john@example.com" />
+            </div>
+            <div class="field-row">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" required placeholder="08012345678" />
+            </div>
+            <div class="field-row">
+              <label for="car-model">Car Model</label>
+              <input type="text" id="car-model" required placeholder="Toyota Corolla" />
+            </div>
+            <div class="field-row">
+              <label for="plate-number">Plate Number</label>
+              <input type="text" id="plate-number" required placeholder="ABC-123DE" />
+            </div>
+            <div class="field-row">
+              <label for="registration-type">Payment Plan</label>
+              <select id="registration-type">
+                <option value="monthly">Monthly - ₦5,000</option>
+                <option value="yearly">Yearly - ₦50,000</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-footer">
+            <div class="field-row amount-row">
+              <span>Amount to pay:</span>
+              <strong id="amount-display">₦5,000</strong>
+            </div>
+            <button type="submit" class="primary-btn">Register &amp; Pay</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="about-section">
+        <h2>About RoadPayNG</h2>
+        <p class="section-intro">RoadPayNG makes vehicle registration fast, secure, and affordable. We also help support road maintenance and safer travel across the country.</p>
+        <ul class="about-list">
+          <li>Register from anywhere using a simple form.</li>
+          <li>Choose flexible monthly or yearly plans.</li>
+          <li>Support improved roads through every contribution.</li>
+        </ul>
+      </section>
+
+      <section id="contact-section">
+        <h2>Contact</h2>
+        <p class="section-intro">Need help completing your registration? Our support team is ready to assist.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Support Email</h3>
+            <p>support@roadpayng.com</p>
+          </div>
+          <div class="contact-card">
+            <h3>Phone</h3>
+            <p>080 1234 5678</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>© 2026 RoadPayNG. Register your car and help improve roads across Nigeria.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
